@@ -66,7 +66,8 @@
 
                 <!-- Desktop Nav -->
                 <nav class="hidden md:flex space-x-8 text-xs font-semibold tracking-wider uppercase">
-                    <a href="#simulador" class="hover:text-terraBrand transition text-terraBrand font-bold"><i class="fa-solid fa-calculator mr-1"></i> Monte seu Pedido</a>
+                    <a href="#como-encomendar" class="hover:text-terraBrand transition text-terraBrand font-bold"><i class="fa-solid fa-list-check mr-1"></i> Como Encomendar</a>
+                    <a href="#simulador" class="hover:text-terraBrand transition">Monte seu Pedido</a>
                     <a href="#bolos" class="hover:text-terraBrand transition">Bolos Personalizados</a>
                     <a href="#doces" class="hover:text-terraBrand transition">Doces Avulsos</a>
                     <a href="#kits" class="hover:text-terraBrand transition">Kits Promocionais</a>
@@ -113,6 +114,62 @@
         </div>
     </section>
 
+    <!-- SECÇÃO ADICIONADA: DIFERENCIAIS -->
+    <section class="py-12 bg-nudeCard border-y border-roseAccent/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                <!-- Diferencial 1 -->
+                <div class="space-y-2 border-l-2 border-roseAccent pl-4 md:pl-6">
+                    <h3 class="font-serif-title text-2xl font-bold text-terraBrand">Sob encomenda</h3>
+                    <p class="text-gray-600 text-sm font-light">Agenda com vagas limitadas</p>
+                </div>
+
+                <!-- Diferencial 2 -->
+                <div class="space-y-2 border-l-2 border-roseAccent pl-4 md:pl-6">
+                    <h3 class="font-serif-title text-2xl font-bold text-terraBrand">Feito à mão</h3>
+                    <p class="text-gray-600 text-sm font-light">Detalhes esculpidos um a um</p>
+                </div>
+
+                <!-- Diferencial 3 -->
+                <div class="space-y-2 border-l-2 border-roseAccent pl-4 md:pl-6">
+                    <h3 class="font-serif-title text-2xl font-bold text-terraBrand">Receitas próprias</h3>
+                    <p class="text-gray-600 text-sm font-light">Massas e recheios autorais</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECÇÃO: COMO ENCOMENDAR -->
+    <section id="como-encomendar" class="py-16 bg-white border-b border-roseAccent/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <span class="text-xs font-semibold tracking-[0.2em] text-terraLight uppercase block mb-3">Como Encomendar</span>
+            <h2 class="font-serif-title text-4xl sm:text-5xl font-normal text-charcoal mb-12">Três passos,<br>e o bolo é seu.</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Passo 01 -->
+                <div class="border-t border-gray-200 pt-6">
+                    <span class="text-terraLight font-serif-title text-xl font-normal block mb-4">01</span>
+                    <h3 class="font-serif-title text-2xl font-normal text-charcoal mb-3">Escolha no catálogo</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed font-light">Navegue pelas coleções e nos envie o doce que combina com a sua celebração pelo WhatsApp.</p>
+                </div>
+                
+                <!-- Passo 02 -->
+                <div class="border-t border-gray-200 pt-6">
+                    <span class="text-terraLight font-serif-title text-xl font-normal block mb-4">02</span>
+                    <h3 class="font-serif-title text-2xl font-normal text-charcoal mb-3">Desenhamos juntas</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed font-light">Definimos tema, cores, tamanho e recheios. Você recebe um esboço e o valor final fechado.</p>
+                </div>
+
+                <!-- Passo 03 -->
+                <div class="border-t border-gray-200 pt-6">
+                    <span class="text-terraLight font-serif-title text-xl font-normal block mb-4">03</span>
+                    <h3 class="font-serif-title text-2xl font-normal text-charcoal mb-3">Retirada ou entrega</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed font-light">A produção é artesanal e sob encomenda, com agenda confirmada. Combinamos retirada ou entrega na sua data.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- SIMULATOR SECTION -->
     <section id="simulador" class="py-16 bg-nudeCard border-y border-roseAccent/30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -124,7 +181,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                 <div class="lg:col-span-7 space-y-8">
                     <!-- SECTION A: BOLO PERSONALIZADO -->
-                    <div class="bg-nudeBg rounded-3xl p-6 border border-roseAccent/40 shadow-sm space-y-6">
+                    <div id="bolos" class="bg-nudeBg rounded-3xl p-6 border border-roseAccent/40 shadow-sm space-y-6">
                         <div class="flex items-center justify-between border-b border-roseAccent/30 pb-3">
                             <div class="flex items-center space-x-3">
                                 <span class="w-8 h-8 rounded-full bg-terraBrand text-white text-xs font-bold flex items-center justify-center">1</span>
