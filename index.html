@@ -35,9 +35,7 @@
         }
     </script>
     <style>
-        .font-serif-title {
-            font-family: 'Cormorant Garamond', serif;
-        }
+        .font-serif-title { font-family: 'Cormorant Garamond', serif; }
         .bg-pattern {
             background-color: #F5ECE5;
             background-image: radial-gradient(#E0B5AA 0.6px, transparent 0.6px), radial-gradient(#E0B5AA 0.6px, #F5ECE5 0.6px);
@@ -49,25 +47,6 @@
             backdrop-filter: blur(12px);
             border: 1px solid rgba(224, 181, 170, 0.35);
         }
-        .tab-btn.active {
-            background-color: #7A3328;
-            color: #ffffff;
-            border-color: #7A3328;
-        }
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #F5ECE5;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #E0B5AA;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #7A3328;
-        }
     </style>
 </head>
 <body class="bg-nudeBg font-sans text-charcoal antialiased selection:bg-roseAccent selection:text-white">
@@ -78,9 +57,7 @@
             <div class="flex items-center justify-between h-20">
                 <!-- Logo -->
                 <div class="flex items-center space-x-3 cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-                    <div class="w-11 h-11 rounded-full bg-terraBrand text-white flex items-center justify-center font-serif-title text-xl font-bold shadow-md">
-                        BL
-                    </div>
+                    <img src="logo.png" alt="Doce Bella Lu Logo" class="w-12 h-12 rounded-full object-cover border-2 border-terraBrand shadow-md" onerror="this.onerror=null; this.src='IMG-20261104-WA0048.jpg';">
                     <div>
                         <span class="font-serif-title text-2xl font-bold tracking-wide text-terraBrand block leading-none">Doce Bella Lu</span>
                         <span class="text-[11px] tracking-widest text-terraLight uppercase font-medium">@docebellalu</span>
@@ -93,7 +70,6 @@
                     <a href="#bolos" class="hover:text-terraBrand transition">Bolos Personalizados</a>
                     <a href="#doces" class="hover:text-terraBrand transition">Doces Avulsos</a>
                     <a href="#kits" class="hover:text-terraBrand transition">Kits Promocionais</a>
-                    <a href="#faq" class="hover:text-terraBrand transition">Informações</a>
                 </nav>
 
                 <!-- Action Button -->
@@ -102,24 +78,7 @@
                         <i class="fa-brands fa-whatsapp text-sm"></i> (11) 91785-5445
                     </a>
                 </div>
-
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden text-terraBrand focus:outline-none p-2">
-                    <i class="fa-solid fa-bars text-xl"></i>
-                </button>
             </div>
-        </div>
-
-        <!-- Mobile Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden bg-nudeCard border-b border-roseAccent/30 px-6 py-4 space-y-3 text-sm">
-            <a href="#simulador" class="block font-bold text-terraBrand py-1">Monte seu Pedido (Simulador)</a>
-            <a href="#bolos" class="block text-gray-700 py-1">Bolos Personalizados</a>
-            <a href="#doces" class="block text-gray-700 py-1">Doces Avulsos</a>
-            <a href="#kits" class="block text-gray-700 py-1">Kits Promocionais</a>
-            <a href="#faq" class="block text-gray-700 py-1">Informações</a>
-            <a href="https://wa.me/5511917855445" target="_blank" class="w-full mt-2 text-center block px-5 py-2.5 rounded-full bg-terraBrand text-white font-medium text-xs tracking-wider uppercase">
-                Falar no WhatsApp
-            </a>
         </div>
     </header>
 
@@ -127,7 +86,6 @@
     <section class="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden bg-pattern">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                
                 <div class="space-y-6 text-center lg:text-left">
                     <span class="inline-block px-4 py-1.5 rounded-full bg-roseAccent/30 text-terraBrand text-xs font-bold tracking-widest uppercase border border-roseAccent">
                         @docebellalu • Confeitaria Artesanal
@@ -138,70 +96,33 @@
                     <p class="text-gray-700 text-sm sm:text-base max-w-xl font-light leading-relaxed mx-auto lg:mx-0">
                         Especialistas em bolos de pasta americana, chantilly e doces personalizados modelados com carinho para a sua festa. Monte seu pedido abaixo e envie direto para o nosso WhatsApp!
                     </p>
-                    
                     <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-                        <a href="#simulador" class="w-full sm:w-auto px-8 py-4 rounded-full bg-terraBrand text-white font-semibold text-xs tracking-widest uppercase shadow-lg hover:bg-terraLight transition transform hover:-translate-y-0.5 text-center flex items-center justify-center gap-3">
+                        <a href="#simulador" class="w-full sm:w-auto px-8 py-4 rounded-full bg-terraBrand text-white font-semibold text-xs tracking-widest uppercase shadow-lg hover:bg-terraLight transition text-center flex items-center justify-center gap-3">
                             <i class="fa-solid fa-wand-magic-sparkles"></i> Simular Meu Pedido
                         </a>
-                        <a href="#kits" class="w-full sm:w-auto px-8 py-4 rounded-full bg-nudeCard text-terraBrand border border-roseAccent font-semibold text-xs tracking-widest uppercase shadow-sm hover:bg-white transition text-center">
-                            Ver Kits Festas
-                        </a>
-                    </div>
-                    
-                    <div class="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-gray-600 font-medium">
-                        <span class="flex items-center gap-2"><i class="fa-solid fa-check text-terraBrand"></i> Pasta Americana & Chantilly</span>
-                        <span class="flex items-center gap-2"><i class="fa-solid fa-check text-terraBrand"></i> Doces Modelados 3D</span>
-                        <span class="flex items-center gap-2"><i class="fa-solid fa-check text-terraBrand"></i> Kits Promocionais</span>
                     </div>
                 </div>
 
                 <!-- Banner Image Card -->
                 <div class="relative">
                     <div class="w-72 h-72 sm:w-96 sm:h-96 mx-auto lg:w-[440px] lg:h-[440px] rounded-full overflow-hidden border-8 border-nudeCard shadow-2xl relative">
-                        <img src="https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=1000&q=80" alt="Bolo Personalizado Doce Bella Lu" class="w-full h-full object-cover transform hover:scale-105 transition duration-700">
-                    </div>
-                    <!-- Badge Floating 1 -->
-                    <div class="absolute top-6 left-4 sm:left-8 glass-card p-4 rounded-2xl shadow-xl flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-full bg-roseAccent/40 flex items-center justify-center text-terraBrand">
-                            <i class="fa-solid fa-cake-candles"></i>
-                        </div>
-                        <div>
-                            <p class="text-xs font-bold text-terraBrand">Pasta Americana</p>
-                            <p class="text-[10px] text-gray-500">R$ 120,00 / kg</p>
-                        </div>
-                    </div>
-                    <!-- Badge Floating 2 -->
-                    <div class="absolute bottom-6 right-4 sm:right-8 glass-card p-4 rounded-2xl shadow-xl flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-full bg-goldTag/20 flex items-center justify-center text-goldTag">
-                            <i class="fa-solid fa-gift"></i>
-                        </div>
-                        <div>
-                            <p class="text-xs font-bold text-terraBrand">Kits Com Desconto</p>
-                            <p class="text-[10px] text-gray-500">A partir de R$ 282,00</p>
-                        </div>
+                        <img src="IMG-20261104-WA0035.jpg" alt="Bolo Personalizado Doce Bella Lu" class="w-full h-full object-cover transform hover:scale-105 transition duration-700">
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- MAIN INTERACTIVE SECTION: ORDER BUILDER / SIMULATOR -->
+    <!-- SIMULATOR SECTION -->
     <section id="simulador" class="py-16 bg-nudeCard border-y border-roseAccent/30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-12">
                 <span class="text-xs font-bold tracking-widest text-terraBrand uppercase">Monte e Calcule Agora</span>
                 <h2 class="font-serif-title text-3xl sm:text-4xl font-normal text-terraBrand mt-1">Simulador de Pedido Completo</h2>
-                <p class="text-gray-600 text-sm mt-2 font-light">
-                    Escolha seu bolo (cobertura, kg, massa e recheio), adicione doces avulsos ou escolha um dos nossos Kits Promocionais com desconto!
-                </p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                
-                <!-- Left Column: Controls and Options -->
                 <div class="lg:col-span-7 space-y-8">
-                    
                     <!-- SECTION A: BOLO PERSONALIZADO -->
                     <div class="bg-nudeBg rounded-3xl p-6 border border-roseAccent/40 shadow-sm space-y-6">
                         <div class="flex items-center justify-between border-b border-roseAccent/30 pb-3">
@@ -209,771 +130,128 @@
                                 <span class="w-8 h-8 rounded-full bg-terraBrand text-white text-xs font-bold flex items-center justify-center">1</span>
                                 <h3 class="font-serif-title text-2xl font-bold text-terraBrand">Bolo Personalizado</h3>
                             </div>
-                            <label class="inline-flex items-center cursor-pointer">
-                                <input type="checkbox" id="include-cake-check" class="sr-only peer" checked onchange="toggleCakeSection(this.checked)">
-                                <div class="w-11 h-6 bg-gray-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-terraBrand"></div>
-                                <span class="ml-2 text-xs font-semibold text-charcoal">Incluir Bolo</span>
-                            </label>
                         </div>
 
-                        <div id="cake-options-wrapper" class="space-y-6">
-                            <!-- Cobertura -->
+                        <div class="space-y-6">
                             <div>
-                                <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Tipo de Decoração / Cobertura</label>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                    <button onclick="selectCakeType('chantilly', 100)" class="cake-type-btn p-4 rounded-2xl border border-gray-300 bg-white text-left hover:border-terraBrand transition flex flex-col justify-between" data-type="chantilly">
-                                        <div>
-                                            <span class="block text-sm font-bold text-terraBrand">Chantilly</span>
-                                            <span class="text-[11px] text-gray-500">Decoração leve e artesanal</span>
-                                        </div>
-                                        <span class="text-xs font-semibold text-terraLight mt-3">R$ 100,00 / kg</span>
-                                    </button>
-                                    <button onclick="selectCakeType('pasta', 120)" class="cake-type-btn p-4 rounded-2xl border border-gray-300 bg-white text-left hover:border-terraBrand transition flex flex-col justify-between active border-terraBrand ring-2 ring-terraBrand/20" data-type="pasta">
-                                        <div>
-                                            <span class="block text-sm font-bold text-terraBrand">Pasta Americana</span>
-                                            <span class="text-[11px] text-gray-500">Modelagem artística detalhada</span>
-                                        </div>
-                                        <span class="text-xs font-semibold text-terraLight mt-3">R$ 120,00 / kg</span>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Weight in KG -->
-                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Peso do Bolo (Quilos)</label>
                                 <div class="flex justify-between items-center mb-2">
-                                    <label class="text-xs font-bold text-gray-700 uppercase tracking-wider">Peso do Bolo (Quilos)</label>
                                     <span class="text-xs font-bold text-terraBrand bg-roseAccent/30 px-3 py-1 rounded-full" id="kg-display">2,0 kg (~ 20 fatias)</span>
                                 </div>
-                                <div class="flex items-center space-x-4">
-                                    <input type="range" id="cake-kg-range" min="1.5" max="6.0" step="0.5" value="2.0" oninput="updateCakeKg(this.value)" class="w-full accent-terraBrand cursor-pointer">
-                                </div>
-                                <div class="flex justify-between text-[10px] text-gray-500 mt-1">
-                                    <span>1,5 kg (15 fatias)</span>
-                                    <span>3,0 kg (30 fatias)</span>
-                                    <span>6,0 kg (60 fatias)</span>
-                                </div>
-                            </div>
-
-                            <!-- Dough Choice -->
-                            <div>
-                                <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Sabor da Massa</label>
-                                <div class="grid grid-cols-2 gap-3">
-                                    <button onclick="selectDough('Massa Branca')" class="dough-btn p-3 rounded-xl border border-gray-300 bg-white text-left text-xs font-semibold hover:border-terraBrand transition active border-terraBrand ring-2 ring-terraBrand/20" data-dough="Massa Branca">
-                                        <i class="fa-solid fa-cookie text-roseAccent mr-2"></i> Massa Branca
-                                    </button>
-                                    <button onclick="selectDough('Massa de Chocolate')" class="dough-btn p-3 rounded-xl border border-gray-300 bg-white text-left text-xs font-semibold hover:border-terraBrand transition" data-dough="Massa de Chocolate">
-                                        <i class="fa-solid fa-cookie text-terraBrand mr-2"></i> Massa de Chocolate
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Filling Choice -->
-                            <div>
-                                <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Sabor do Recheio</label>
-                                <select id="filling-select" onchange="selectFilling(this.value)" class="w-full p-3 bg-white border border-gray-300 rounded-xl text-xs font-medium text-charcoal focus:ring-2 focus:ring-terraBrand focus:outline-none">
-                                    <option value="Brigadeiro">Brigadeiro Tradicional</option>
-                                    <option value="Brigadeiro branco">Brigadeiro Branco</option>
-                                    <option value="Beijinho">Beijinho</option>
-                                    <option value="Ninho">Leite Ninho</option>
-                                    <option value="Ninho com Nutella">Ninho com Nutella</option>
-                                    <option value="Prestígio">Prestígio</option>
-                                    <option value="Paçoca">Paçoca</option>
-                                    <option value="Morango c/ creme branco">Morango c/ Creme Branco</option>
-                                    <option value="Morango c/ brigadeiro">Morango c/ Brigadeiro</option>
-                                </select>
+                                <input type="range" id="cake-kg-range" min="1.5" max="6.0" step="0.5" value="2.0" oninput="updateCakeKg(this.value)" class="w-full accent-terraBrand cursor-pointer">
                             </div>
                         </div>
                     </div>
 
-                    <!-- SECTION B: KITS PROMOCIONAIS -->
-                    <div class="bg-nudeBg rounded-3xl p-6 border border-roseAccent/40 shadow-sm space-y-4">
+                    <!-- SECTION B: KITS PROMOCIONAIS COM FOTOS -->
+                    <div id="kits" class="bg-nudeBg rounded-3xl p-6 border border-roseAccent/40 shadow-sm space-y-4">
                         <div class="flex items-center space-x-3 border-b border-roseAccent/30 pb-3">
                             <span class="w-8 h-8 rounded-full bg-terraBrand text-white text-xs font-bold flex items-center justify-center">2</span>
                             <div>
                                 <h3 class="font-serif-title text-2xl font-bold text-terraBrand">Kits Promocionais com Desconto</h3>
-                                <p class="text-[11px] text-gray-500">Os kits contêm proporções iguais de Trufas, Pirulitos, Cupcakes, Maçãs e Pães de Mel</p>
                             </div>
                         </div>
 
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="kits-container">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <!-- Kit 1 -->
-                            <div onclick="selectKit(1, 282, 'Kit 1 (20 doces - 4 de cada)')" class="kit-card cursor-pointer p-4 rounded-2xl border border-gray-300 bg-white hover:border-terraBrand transition relative" data-kit-id="1">
-                                <span class="absolute top-3 right-3 text-[10px] font-bold bg-green-100 text-green-800 px-2 py-0.5 rounded-full">Economize R$ 38</span>
-                                <h4 class="font-bold text-sm text-terraBrand">Kit 1 - 20 Doces</h4>
-                                <p class="text-[11px] text-gray-500 mt-1">4 trufas, 4 pirulitos, 4 cupcakes, 4 maçãs, 4 pães de mel</p>
-                                <div class="mt-3 flex items-baseline gap-2">
-                                    <span class="text-xs line-through text-gray-400">R$ 320,00</span>
-                                    <span class="text-sm font-bold text-terraBrand">R$ 282,00</span>
-                                </div>
+                            <div class="p-4 rounded-2xl border border-gray-300 bg-white hover:border-terraBrand transition relative">
+                                <img src="IMG-20261104-WA0046.jpg" alt="Kit Borboletas" class="w-full h-32 object-cover rounded-xl mb-3">
+                                <h4 class="font-bold text-sm text-terraBrand">Kit 1 - 20 Doces (Jardim)</h4>
+                                <span class="text-sm font-bold text-terraBrand">R$ 282,00</span>
                             </div>
                             <!-- Kit 2 -->
-                            <div onclick="selectKit(2, 410, 'Kit 2 (30 doces - 6 de cada)')" class="kit-card cursor-pointer p-4 rounded-2xl border border-gray-300 bg-white hover:border-terraBrand transition relative" data-kit-id="2">
-                                <h4 class="font-bold text-sm text-terraBrand">Kit 2 - 30 Doces</h4>
-                                <p class="text-[11px] text-gray-500 mt-1">6 trufas, 6 pirulitos, 6 cupcakes, 6 maçãs, 6 pães de mel</p>
-                                <div class="mt-3 flex items-baseline gap-2">
-                                    <span class="text-xs line-through text-gray-400">R$ 480,00</span>
-                                    <span class="text-sm font-bold text-terraBrand">R$ 410,00</span>
-                                </div>
+                            <div class="p-4 rounded-2xl border border-gray-300 bg-white hover:border-terraBrand transition relative">
+                                <img src="IMG-20261104-WA0035.jpg" alt="Kit Sonic" class="w-full h-32 object-cover rounded-xl mb-3">
+                                <h4 class="font-bold text-sm text-terraBrand">Kit 2 - 30 Doces (Sonic)</h4>
+                                <span class="text-sm font-bold text-terraBrand">R$ 410,00</span>
                             </div>
                             <!-- Kit 3 -->
-                            <div onclick="selectKit(3, 544, 'Kit 3 (40 doces - 8 de cada)')" class="kit-card cursor-pointer p-4 rounded-2xl border border-gray-300 bg-white hover:border-terraBrand transition relative" data-kit-id="3">
-                                <span class="absolute top-3 right-3 text-[10px] font-bold bg-green-100 text-green-800 px-2 py-0.5 rounded-full">Economize R$ 96</span>
-                                <h4 class="font-bold text-sm text-terraBrand">Kit 3 - 40 Doces</h4>
-                                <p class="text-[11px] text-gray-500 mt-1">8 trufas, 8 pirulitos, 8 cupcakes, 8 maçãs, 8 pães de mel</p>
-                                <div class="mt-3 flex items-baseline gap-2">
-                                    <span class="text-xs line-through text-gray-400">R$ 640,00</span>
-                                    <span class="text-sm font-bold text-terraBrand">R$ 544,00</span>
-                                </div>
+                            <div class="p-4 rounded-2xl border border-gray-300 bg-white hover:border-terraBrand transition relative">
+                                <img src="IMG-20261104-WA0043.jpg" alt="Kit Princesas" class="w-full h-32 object-cover rounded-xl mb-3">
+                                <h4 class="font-bold text-sm text-terraBrand">Kit 3 - 40 Doces (Princesas)</h4>
+                                <span class="text-sm font-bold text-terraBrand">R$ 544,00</span>
                             </div>
                             <!-- Kit 4 -->
-                            <div onclick="selectKit(4, 672, 'Kit 4 (50 doces - 10 de cada)')" class="kit-card cursor-pointer p-4 rounded-2xl border border-gray-300 bg-white hover:border-terraBrand transition relative" data-kit-id="4">
-                                <span class="absolute top-3 right-3 text-[10px] font-bold bg-green-100 text-green-800 px-2 py-0.5 rounded-full">Economize R$ 128</span>
-                                <h4 class="font-bold text-sm text-terraBrand">Kit 4 - 50 Doces</h4>
-                                <p class="text-[11px] text-gray-500 mt-1">10 trufas, 10 pirulitos, 10 cupcakes, 10 maçãs, 10 pães de mel</p>
-                                <div class="mt-3 flex items-baseline gap-2">
-                                    <span class="text-xs line-through text-gray-400">R$ 800,00</span>
-                                    <span class="text-sm font-bold text-terraBrand">R$ 672,00</span>
-                                </div>
+                            <div class="p-4 rounded-2xl border border-gray-300 bg-white hover:border-terraBrand transition relative">
+                                <img src="IMG-20261104-WA0047.jpg" alt="Kit Doces Finos" class="w-full h-32 object-cover rounded-xl mb-3">
+                                <h4 class="font-bold text-sm text-terraBrand">Kit 4 - 50 Doces Finos</h4>
+                                <span class="text-sm font-bold text-terraBrand">R$ 672,00</span>
                             </div>
                         </div>
-                        <button onclick="deselectKit()" id="clear-kit-btn" class="hidden text-xs text-roseAccent hover:text-terraBrand underline font-medium">Remover Seleção de Kit</button>
                     </div>
 
-                    <!-- SECTION C: DOCES AVULSOS -->
-                    <div class="bg-nudeBg rounded-3xl p-6 border border-roseAccent/40 shadow-sm space-y-4">
+                    <!-- SECTION C: DOCES AVULSOS COM FOTOS -->
+                    <div id="doces" class="bg-nudeBg rounded-3xl p-6 border border-roseAccent/40 shadow-sm space-y-4">
                         <div class="flex items-center space-x-3 border-b border-roseAccent/30 pb-3">
                             <span class="w-8 h-8 rounded-full bg-terraBrand text-white text-xs font-bold flex items-center justify-center">3</span>
                             <h3 class="font-serif-title text-2xl font-bold text-terraBrand">Doces Avulsos Personalizados</h3>
                         </div>
 
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="sweets-controls">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <!-- Trufa -->
-                            <div class="p-3 bg-white rounded-2xl border border-gray-200 flex items-center justify-between">
-                                <div>
-                                    <span class="block text-xs font-bold text-charcoal">Trufa</span>
+                            <div class="p-3 bg-white rounded-2xl border border-gray-200 flex items-center justify-between gap-3">
+                                <img src="IMG-20261104-WA0033.jpg" class="w-14 h-14 object-cover rounded-xl" alt="Trufa">
+                                <div class="flex-1">
+                                    <span class="block text-xs font-bold text-charcoal">Trufa 3D</span>
                                     <span class="text-[11px] text-terraBrand font-semibold">R$ 10,00 un</span>
-                                </div>
-                                <div class="flex items-center space-x-2">
-                                    <button onclick="changeSweetQty('trufa', -1)" class="w-7 h-7 rounded-full bg-nudeBg text-terraBrand font-bold text-xs flex items-center justify-center hover:bg-roseAccent/30">-</button>
-                                    <span class="text-xs font-bold w-5 text-center" id="qty-trufa">0</span>
-                                    <button onclick="changeSweetQty('trufa', 1)" class="w-7 h-7 rounded-full bg-terraBrand text-white font-bold text-xs flex items-center justify-center hover:bg-terraLight">+</button>
                                 </div>
                             </div>
                             <!-- Pirulito -->
-                            <div class="p-3 bg-white rounded-2xl border border-gray-200 flex items-center justify-between">
-                                <div>
-                                    <span class="block text-xs font-bold text-charcoal">Pirulito</span>
+                            <div class="p-3 bg-white rounded-2xl border border-gray-200 flex items-center justify-between gap-3">
+                                <img src="IMG-20261104-WA0048.jpg" class="w-14 h-14 object-cover rounded-xl" alt="Pirulito">
+                                <div class="flex-1">
+                                    <span class="block text-xs font-bold text-charcoal">Pirulito Chocolate</span>
                                     <span class="text-[11px] text-terraBrand font-semibold">R$ 16,00 un</span>
-                                </div>
-                                <div class="flex items-center space-x-2">
-                                    <button onclick="changeSweetQty('pirulito', -1)" class="w-7 h-7 rounded-full bg-nudeBg text-terraBrand font-bold text-xs flex items-center justify-center hover:bg-roseAccent/30">-</button>
-                                    <span class="text-xs font-bold w-5 text-center" id="qty-pirulito">0</span>
-                                    <button onclick="changeSweetQty('pirulito', 1)" class="w-7 h-7 rounded-full bg-terraBrand text-white font-bold text-xs flex items-center justify-center hover:bg-terraLight">+</button>
                                 </div>
                             </div>
                             <!-- Cupcake -->
-                            <div class="p-3 bg-white rounded-2xl border border-gray-200 flex items-center justify-between">
-                                <div>
+                            <div class="p-3 bg-white rounded-2xl border border-gray-200 flex items-center justify-between gap-3">
+                                <img src="IMG-20261104-WA0045.jpg" class="w-14 h-14 object-cover rounded-xl" alt="Cupcake">
+                                <div class="flex-1">
                                     <span class="block text-xs font-bold text-charcoal">Cupcake</span>
                                     <span class="text-[11px] text-terraBrand font-semibold">R$ 17,00 un</span>
                                 </div>
-                                <div class="flex items-center space-x-2">
-                                    <button onclick="changeSweetQty('cupcake', -1)" class="w-7 h-7 rounded-full bg-nudeBg text-terraBrand font-bold text-xs flex items-center justify-center hover:bg-roseAccent/30">-</button>
-                                    <span class="text-xs font-bold w-5 text-center" id="qty-cupcake">0</span>
-                                    <button onclick="changeSweetQty('cupcake', 1)" class="w-7 h-7 rounded-full bg-terraBrand text-white font-bold text-xs flex items-center justify-center hover:bg-terraLight">+</button>
-                                </div>
                             </div>
                             <!-- Maçã -->
-                            <div class="p-3 bg-white rounded-2xl border border-gray-200 flex items-center justify-between">
-                                <div>
+                            <div class="p-3 bg-white rounded-2xl border border-gray-200 flex items-center justify-between gap-3">
+                                <img src="IMG-20261104-WA0031.jpg" class="w-14 h-14 object-cover rounded-xl" alt="Maçã">
+                                <div class="flex-1">
                                     <span class="block text-xs font-bold text-charcoal">Maçã Decorada</span>
                                     <span class="text-[11px] text-terraBrand font-semibold">R$ 17,00 un</span>
                                 </div>
-                                <div class="flex items-center space-x-2">
-                                    <button onclick="changeSweetQty('maca', -1)" class="w-7 h-7 rounded-full bg-nudeBg text-terraBrand font-bold text-xs flex items-center justify-center hover:bg-roseAccent/30">-</button>
-                                    <span class="text-xs font-bold w-5 text-center" id="qty-maca">0</span>
-                                    <button onclick="changeSweetQty('maca', 1)" class="w-7 h-7 rounded-full bg-terraBrand text-white font-bold text-xs flex items-center justify-center hover:bg-terraLight">+</button>
-                                </div>
-                            </div>
-                            <!-- Porta-retrato -->
-                            <div class="p-3 bg-white rounded-2xl border border-gray-200 flex items-center justify-between">
-                                <div>
-                                    <span class="block text-xs font-bold text-charcoal">Porta-retrato de Chocolate</span>
-                                    <span class="text-[11px] text-terraBrand font-semibold">R$ 17,00 un</span>
-                                </div>
-                                <div class="flex items-center space-x-2">
-                                    <button onclick="changeSweetQty('portaRetrato', -1)" class="w-7 h-7 rounded-full bg-nudeBg text-terraBrand font-bold text-xs flex items-center justify-center hover:bg-roseAccent/30">-</button>
-                                    <span class="text-xs font-bold w-5 text-center" id="qty-portaRetrato">0</span>
-                                    <button onclick="changeSweetQty('portaRetrato', 1)" class="w-7 h-7 rounded-full bg-terraBrand text-white font-bold text-xs flex items-center justify-center hover:bg-terraLight">+</button>
-                                </div>
                             </div>
                             <!-- Pão de Mel -->
-                            <div class="p-3 bg-white rounded-2xl border border-gray-200 flex items-center justify-between">
-                                <div>
+                            <div class="p-3 bg-white rounded-2xl border border-gray-200 flex items-center justify-between gap-3">
+                                <img src="IMG-20261104-WA0037.jpg" class="w-14 h-14 object-cover rounded-xl" alt="Pão de Mel">
+                                <div class="flex-1">
                                     <span class="block text-xs font-bold text-charcoal">Pão de Mel</span>
                                     <span class="text-[11px] text-terraBrand font-semibold">R$ 20,00 un</span>
                                 </div>
-                                <div class="flex items-center space-x-2">
-                                    <button onclick="changeSweetQty('paoDeMel', -1)" class="w-7 h-7 rounded-full bg-nudeBg text-terraBrand font-bold text-xs flex items-center justify-center hover:bg-roseAccent/30">-</button>
-                                    <span class="text-xs font-bold w-5 text-center" id="qty-paoDeMel">0</span>
-                                    <button onclick="changeSweetQty('paoDeMel', 1)" class="w-7 h-7 rounded-full bg-terraBrand text-white font-bold text-xs flex items-center justify-center hover:bg-terraLight">+</button>
-                                </div>
                             </div>
                         </div>
-                        <p class="text-[11px] text-gray-500 italic">* Doces com modelagem 3D especial sob consulta.</p>
                     </div>
-
-                    <!-- Theme & Observation Field -->
-                    <div class="bg-nudeBg rounded-3xl p-6 border border-roseAccent/40 shadow-sm">
-                        <label class="block text-xs font-bold uppercase text-terraBrand mb-2">Tema da Festa / Detalhes do Pedido</label>
-                        <textarea id="order-notes" rows="3" placeholder="Ex: Tema Ursinho Pooh, cores bege e azul bebê, data do evento: 15/10..." class="w-full rounded-2xl border border-gray-300 p-3 text-xs focus:ring-2 focus:ring-terraBrand focus:outline-none bg-white"></textarea>
-                    </div>
-
                 </div>
 
-                <!-- Right Column: Live Summary Box -->
+                <!-- Right Column: Final Order Action -->
                 <div class="lg:col-span-5 sticky top-28">
-                    <div class="glass-card rounded-3xl p-6 sm:p-8 shadow-xl border border-roseAccent/50 space-y-6">
-                        <div class="flex items-center justify-between pb-4 border-b border-roseAccent/30">
-                            <div>
-                                <span class="text-[10px] font-bold text-terraLight uppercase tracking-widest">Resumo do Pedido</span>
-                                <h3 class="font-serif-title text-2xl font-bold text-terraBrand">Doce Bella Lu</h3>
-                            </div>
-                            <div class="w-10 h-10 rounded-full bg-terraBrand text-white flex items-center justify-center">
-                                <i class="fa-solid fa-receipt"></i>
-                            </div>
-                        </div>
-
-                        <!-- Breakdown items -->
-                        <div class="space-y-3 text-xs" id="summary-breakdown">
-                            <!-- Populated dynamically via JS -->
-                        </div>
-
-                        <!-- Total Container -->
-                        <div class="p-4 rounded-2xl bg-roseAccent/20 border border-roseAccent/40 text-center">
-                            <span class="text-[11px] font-semibold text-gray-600 uppercase tracking-wider block">Valor Total Estimado</span>
-                            <div class="text-3xl font-serif-title font-bold text-terraBrand my-1" id="total-price-display">
-                                R$ 240,00
-                            </div>
-                            <span class="text-[10px] text-gray-500 block">Sinal de 50% na reserva + 50% na entrega</span>
-                        </div>
-
-                        <!-- Submit Button -->
-                        <button onclick="sendOrderWhatsApp()" class="w-full py-4 rounded-2xl bg-emerald-600 text-white font-semibold text-xs tracking-wider uppercase shadow-lg hover:bg-emerald-700 transition flex items-center justify-center gap-2 group">
-                            <i class="fa-brands fa-whatsapp text-lg group-hover:scale-110 transition"></i>
-                            Enviar Pedido via WhatsApp
-                        </button>
-                        <p class="text-[10px] text-center text-gray-500">Número oficial: <strong>(11) 91785-5445</strong></p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION: BOLOS DETALHES -->
-    <section id="bolos" class="py-16 bg-nudeBg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <span class="text-xs font-bold tracking-widest text-terraBrand uppercase">Tabela de Bolos</span>
-                <h2 class="font-serif-title text-3xl sm:text-4xl font-normal text-terraBrand mt-1">Bolos Personalizados por Quilo</h2>
-                <p class="text-gray-600 text-sm mt-2 font-light">
-                    Escolha entre a delicadeza do Chantilly ou a perfeição artística da Pasta Americana.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Chantilly -->
-                <div class="bg-nudeCard rounded-3xl p-8 border border-roseAccent/40 shadow-sm relative overflow-hidden flex flex-col justify-between">
-                    <div>
-                        <span class="bg-roseAccent/30 text-terraBrand text-[10px] font-bold px-3 py-1 rounded-full uppercase">Opção 1</span>
-                        <h3 class="font-serif-title text-3xl font-bold text-terraBrand mt-3">Decoração em Chantilly</h3>
-                        <p class="text-xs text-gray-600 mt-2">Texturas suaves, espatulados modernos, toppers personalizados e acabamentos aveludados.</p>
-                        <div class="text-3xl font-serif-title font-bold text-terraBrand mt-4">R$ 100,00 <span class="text-xs font-sans font-normal text-gray-500">/ kg</span></div>
-                    </div>
-                    <a href="#simulador" onclick="selectCakeType('chantilly', 100)" class="mt-6 inline-block w-full text-center py-3 rounded-full border border-terraBrand text-terraBrand font-semibold text-xs uppercase hover:bg-terraBrand hover:text-white transition">
-                        Selecionar Chantilly
-                    </a>
-                </div>
-
-                <!-- Pasta Americana -->
-                <div class="bg-nudeCard rounded-3xl p-8 border border-terraBrand/30 shadow-md relative overflow-hidden flex flex-col justify-between">
-                    <div>
-                        <span class="bg-terraBrand text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Opção Premium</span>
-                        <h3 class="font-serif-title text-3xl font-bold text-terraBrand mt-3">Decoração em Pasta Americana</h3>
-                        <p class="text-xs text-gray-600 mt-2">Esculturas 3D, temas ricos em detalhes, acabamento impecável e estrutura blindada.</p>
-                        <div class="text-3xl font-serif-title font-bold text-terraBrand mt-4">R$ 120,00 <span class="text-xs font-sans font-normal text-gray-500">/ kg</span></div>
-                    </div>
-                    <a href="#simulador" onclick="selectCakeType('pasta', 120)" class="mt-6 inline-block w-full text-center py-3 rounded-full bg-terraBrand text-white font-semibold text-xs uppercase hover:bg-terraLight transition">
-                        Selecionar Pasta Americana
-                    </a>
-                </div>
-            </div>
-
-            <!-- Flavors & Fillings List -->
-            <div class="mt-12 bg-white rounded-3xl p-8 border border-roseAccent/30 shadow-sm">
-                <h4 class="font-serif-title text-2xl font-bold text-terraBrand mb-4">Opções de Massas e Recheios</h4>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs">
-                    <div>
-                        <span class="font-bold text-terraBrand uppercase tracking-wider block mb-2"><i class="fa-solid fa-wheat-awn mr-1"></i> Massas Disponíveis:</span>
-                        <ul class="space-y-1 text-gray-600 pl-4 list-disc">
-                            <li>Massa Branca (Baunilha amanteigada)</li>
-                            <li>Massa de Chocolate (Cacau nobre)</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <span class="font-bold text-terraBrand uppercase tracking-wider block mb-2"><i class="fa-solid fa-spoon mr-1"></i> Recheios Deliciosos:</span>
-                        <div class="grid grid-cols-2 gap-1 text-gray-600">
-                            <span>• Beijinho</span>
-                            <span>• Brigadeiro</span>
-                            <span>• Brigadeiro branco</span>
-                            <span>• Ninho</span>
-                            <span>• Ninho com Nutella</span>
-                            <span>• Prestígio</span>
-                            <span>• Paçoca</span>
-                            <span>• Morango c/ creme branco</span>
-                            <span>• Morango c/ brigadeiro</span>
-                        </div>
+                    <div class="bg-white rounded-3xl p-6 shadow-xl border border-roseAccent/40 space-y-6">
+                        <h3 class="font-serif-title text-2xl font-bold text-terraBrand border-b pb-3">Finalizar Orçamento</h3>
+                        <a href="https://wa.me/5511917855445?text=Olá!%20Vim%20pelo%20site%20da%20Doce%20Bella%20Lu%20e%20gostaria%20de%20fazer%20um%20pedido." target="_blank" class="w-full py-4 rounded-full bg-[#25D366] text-white font-bold text-xs tracking-widest uppercase shadow-lg hover:bg-[#20ba5a] transition flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-lg"></i> Enviar Pedido no WhatsApp (11) 91785-5445
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION: KITS PROMOCIONAIS SHOWCASE -->
-    <section id="kits" class="py-16 bg-white border-y border-roseAccent/30">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <span class="text-xs font-bold tracking-widest text-terraBrand uppercase">Combos Especiais</span>
-                <h2 class="font-serif-title text-3xl sm:text-4xl font-normal text-terraBrand mt-1">Kits Festas Personalizados</h2>
-                <p class="text-gray-600 text-sm mt-2 font-light">
-                    Os kits são compostos por quantidades iguais de: <strong>trufas, pirulitos, cupcakes, maçãs e pães de mel</strong>.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Kit 1 Card -->
-                <div class="bg-nudeCard rounded-3xl p-6 border border-roseAccent/30 shadow-sm flex flex-col justify-between hover:shadow-lg transition">
-                    <div>
-                        <span class="text-[10px] font-bold text-terraBrand bg-roseAccent/30 px-3 py-1 rounded-full uppercase">Kit 1</span>
-                        <h3 class="font-serif-title text-2xl font-bold text-terraBrand my-2">20 Doces</h3>
-                        <p class="text-xs text-gray-500 mb-4">4 unidades de cada doce personalizado</p>
-                    </div>
-                    <div>
-                        <div class="border-t border-gray-200 pt-3 flex items-baseline justify-between">
-                            <span class="text-xs line-through text-gray-400">R$ 320,00</span>
-                            <span class="text-xl font-bold text-terraBrand">R$ 282,00</span>
-                        </div>
-                        <a href="#simulador" onclick="selectKit(1, 282, 'Kit 1 (20 doces - 4 de cada)')" class="mt-4 block text-center w-full py-2.5 rounded-full bg-terraBrand text-white text-xs font-semibold uppercase hover:bg-terraLight transition">Quero o Kit 1</a>
-                    </div>
-                </div>
-
-                <!-- Kit 2 Card -->
-                <div class="bg-nudeCard rounded-3xl p-6 border border-roseAccent/30 shadow-sm flex flex-col justify-between hover:shadow-lg transition">
-                    <div>
-                        <span class="text-[10px] font-bold text-terraBrand bg-roseAccent/30 px-3 py-1 rounded-full uppercase">Kit 2</span>
-                        <h3 class="font-serif-title text-2xl font-bold text-terraBrand my-2">30 Doces</h3>
-                        <p class="text-xs text-gray-500 mb-4">6 unidades de cada doce personalizado</p>
-                    </div>
-                    <div>
-                        <div class="border-t border-gray-200 pt-3 flex items-baseline justify-between">
-                            <span class="text-xs line-through text-gray-400">R$ 480,00</span>
-                            <span class="text-xl font-bold text-terraBrand">R$ 410,00</span>
-                        </div>
-                        <a href="#simulador" onclick="selectKit(2, 410, 'Kit 2 (30 doces - 6 de cada)')" class="mt-4 block text-center w-full py-2.5 rounded-full bg-terraBrand text-white text-xs font-semibold uppercase hover:bg-terraLight transition">Quero o Kit 2</a>
-                    </div>
-                </div>
-
-                <!-- Kit 3 Card -->
-                <div class="bg-nudeCard rounded-3xl p-6 border border-roseAccent/30 shadow-sm flex flex-col justify-between hover:shadow-lg transition">
-                    <div>
-                        <span class="text-[10px] font-bold text-terraBrand bg-roseAccent/30 px-3 py-1 rounded-full uppercase">Kit 3</span>
-                        <h3 class="font-serif-title text-2xl font-bold text-terraBrand my-2">40 Doces</h3>
-                        <p class="text-xs text-gray-500 mb-4">8 unidades de cada doce personalizado</p>
-                    </div>
-                    <div>
-                        <div class="border-t border-gray-200 pt-3 flex items-baseline justify-between">
-                            <span class="text-xs line-through text-gray-400">R$ 640,00</span>
-                            <span class="text-xl font-bold text-terraBrand">R$ 544,00</span>
-                        </div>
-                        <a href="#simulador" onclick="selectKit(3, 544, 'Kit 3 (40 doces - 8 de cada)')" class="mt-4 block text-center w-full py-2.5 rounded-full bg-terraBrand text-white text-xs font-semibold uppercase hover:bg-terraLight transition">Quero o Kit 3</a>
-                    </div>
-                </div>
-
-                <!-- Kit 4 Card -->
-                <div class="bg-nudeCard rounded-3xl p-6 border border-roseAccent/30 shadow-sm flex flex-col justify-between hover:shadow-lg transition">
-                    <div>
-                        <span class="text-[10px] font-bold text-terraBrand bg-roseAccent/30 px-3 py-1 rounded-full uppercase">Kit 4</span>
-                        <h3 class="font-serif-title text-2xl font-bold text-terraBrand my-2">50 Doces</h3>
-                        <p class="text-xs text-gray-500 mb-4">10 unidades de cada doce personalizado</p>
-                    </div>
-                    <div>
-                        <div class="border-t border-gray-200 pt-3 flex items-baseline justify-between">
-                            <span class="text-xs line-through text-gray-400">R$ 800,00</span>
-                            <span class="text-xl font-bold text-terraBrand">R$ 672,00</span>
-                        </div>
-                        <a href="#simulador" onclick="selectKit(4, 672, 'Kit 4 (50 doces - 10 de cada)')" class="mt-4 block text-center w-full py-2.5 rounded-full bg-terraBrand text-white text-xs font-semibold uppercase hover:bg-terraLight transition">Quero o Kit 4</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION: DOCES AVULSOS GRID -->
-    <section id="doces" class="py-16 bg-nudeBg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <span class="text-xs font-bold tracking-widest text-terraBrand uppercase">Tabela de Valores</span>
-                <h2 class="font-serif-title text-3xl sm:text-4xl font-normal text-terraBrand mt-1">Doces Avulsos Personalizados</h2>
-                <p class="text-gray-600 text-sm mt-2 font-light">
-                    Peça unidades avulsas dos seus doces decorados favoritos.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-                <!-- Trufa -->
-                <div class="bg-white p-5 rounded-3xl border border-roseAccent/30 text-center shadow-sm hover:shadow-md transition">
-                    <div class="w-12 h-12 mx-auto rounded-full bg-nudeBg flex items-center justify-center text-terraBrand mb-3 text-lg">🍬</div>
-                    <h4 class="font-bold text-sm text-charcoal">Trufa</h4>
-                    <p class="text-xs font-bold text-terraBrand mt-1">R$ 10,00 un</p>
-                </div>
-                <!-- Pirulito -->
-                <div class="bg-white p-5 rounded-3xl border border-roseAccent/30 text-center shadow-sm hover:shadow-md transition">
-                    <div class="w-12 h-12 mx-auto rounded-full bg-nudeBg flex items-center justify-center text-terraBrand mb-3 text-lg">🍭</div>
-                    <h4 class="font-bold text-sm text-charcoal">Pirulito</h4>
-                    <p class="text-xs font-bold text-terraBrand mt-1">R$ 16,00 un</p>
-                </div>
-                <!-- Cupcake -->
-                <div class="bg-white p-5 rounded-3xl border border-roseAccent/30 text-center shadow-sm hover:shadow-md transition">
-                    <div class="w-12 h-12 mx-auto rounded-full bg-nudeBg flex items-center justify-center text-terraBrand mb-3 text-lg">🧁</div>
-                    <h4 class="font-bold text-sm text-charcoal">Cupcake</h4>
-                    <p class="text-xs font-bold text-terraBrand mt-1">R$ 17,00 un</p>
-                </div>
-                <!-- Maçã -->
-                <div class="bg-white p-5 rounded-3xl border border-roseAccent/30 text-center shadow-sm hover:shadow-md transition">
-                    <div class="w-12 h-12 mx-auto rounded-full bg-nudeBg flex items-center justify-center text-terraBrand mb-3 text-lg">🍎</div>
-                    <h4 class="font-bold text-sm text-charcoal">Maçã</h4>
-                    <p class="text-xs font-bold text-terraBrand mt-1">R$ 17,00 un</p>
-                </div>
-                <!-- Porta retrato -->
-                <div class="bg-white p-5 rounded-3xl border border-roseAccent/30 text-center shadow-sm hover:shadow-md transition">
-                    <div class="w-12 h-12 mx-auto rounded-full bg-nudeBg flex items-center justify-center text-terraBrand mb-3 text-lg">🖼️</div>
-                    <h4 class="font-bold text-sm text-charcoal">Porta-retrato</h4>
-                    <p class="text-xs font-bold text-terraBrand mt-1">R$ 17,00 un</p>
-                </div>
-                <!-- Pão de Mel -->
-                <div class="bg-white p-5 rounded-3xl border border-roseAccent/30 text-center shadow-sm hover:shadow-md transition">
-                    <div class="w-12 h-12 mx-auto rounded-full bg-nudeBg flex items-center justify-center text-terraBrand mb-3 text-lg">🍯</div>
-                    <h4 class="font-bold text-sm text-charcoal">Pão de Mel</h4>
-                    <p class="text-xs font-bold text-terraBrand mt-1">R$ 20,00 un</p>
-                </div>
-            </div>
-            
-            <div class="text-center mt-6">
-                <span class="inline-block px-4 py-2 rounded-full bg-terraBrand/10 text-terraBrand font-semibold text-xs">
-                    * Doces com modelagens 3D esculpidas sob consulta.
-                </span>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION: FAQ -->
-    <section id="faq" class="py-16 bg-white border-t border-roseAccent/30">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <span class="text-xs font-bold tracking-widest text-terraBrand uppercase">Tire suas Dúvidas</span>
-                <h2 class="font-serif-title text-3xl sm:text-4xl font-normal text-terraBrand mt-1">Como encomendar na Doce Bella Lu</h2>
-            </div>
-
-            <div class="space-y-4">
-                <div class="border border-roseAccent/30 rounded-2xl bg-nudeCard p-5">
-                    <h4 class="font-serif-title text-xl font-bold text-terraBrand">Como funciona a confirmação da encomenda?</h4>
-                    <p class="text-xs text-gray-600 mt-2">A data da sua festa fica reservada mediante o pagamento de <strong>50% de sinal</strong> via PIX. O restante é acertado na entrega ou retirada dos produtos.</p>
-                </div>
-                <div class="border border-roseAccent/30 rounded-2xl bg-nudeCard p-5">
-                    <h4 class="font-serif-title text-xl font-bold text-terraBrand">Qual o prazo de antecedência?</h4>
-                    <p class="text-xs text-gray-600 mt-2">Recomendamos fazer o pedido com pelo menos <strong>7 a 15 dias de antecedência</strong> para garantir a vaga na nossa agenda artesanal.</p>
-                </div>
-                <div class="border border-roseAccent/30 rounded-2xl bg-nudeCard p-5">
-                    <h4 class="font-serif-title text-xl font-bold text-terraBrand">Como faço para combinar o tema personalizado?</h4>
-                    <p class="text-xs text-gray-600 mt-2">Após enviar o simulador do pedido pelo site para o nosso WhatsApp, conversaremos sobre as cores, nomes e inspirações de fotos para criar os doces do jeitinho que você sonhou!</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-terraBrand text-white py-12 border-t border-roseAccent/20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-            <div class="flex items-center justify-center space-x-3">
-                <div class="w-10 h-10 rounded-full bg-white text-terraBrand font-serif-title text-xl font-bold flex items-center justify-center">
-                    BL
-                </div>
-                <span class="font-serif-title text-2xl font-bold text-white">Doce Bella Lu</span>
-            </div>
-            <p class="text-xs text-roseAccent font-light">@docebellalu • Bolos & Doces Personalizados</p>
-            <p class="text-xs text-gray-200"><i class="fa-brands fa-whatsapp text-white mr-1"></i> (11) 91785-5445</p>
-            <div class="pt-4 text-[11px] text-roseAccent/80">
-                &copy; 2026 Doce Bella Lu. Todos os direitos reservados.
-            </div>
-        </div>
+    <footer class="bg-nudeCard py-8 text-center text-xs text-gray-500 border-t border-roseAccent/30">
+        <p>© 2026 Doce Bella Lu • Todos os direitos reservados</p>
     </footer>
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/5511917855445" target="_blank" class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-emerald-500 text-white flex items-center justify-center shadow-2xl hover:bg-emerald-600 hover:scale-110 transition duration-300">
-        <i class="fa-brands fa-whatsapp text-3xl"></i>
-    </a>
-
-    <!-- JAVASCRIPT STATE AND ORDER LOGIC -->
     <script>
-        // State
-        const orderState = {
-            includeCake: true,
-            cakeType: 'pasta', // 'chantilly' or 'pasta'
-            cakePricePerKg: 120,
-            cakeKg: 2.0,
-            cakeDough: 'Massa Branca',
-            cakeFilling: 'Brigadeiro',
-            
-            selectedKit: null, // { id, price, name }
-
-            sweetsQty: {
-                trufa: 0,
-                pirulito: 0,
-                cupcake: 0,
-                maca: 0,
-                portaRetrato: 0,
-                paoDeMel: 0
-            }
-        };
-
-        const sweetPrices = {
-            trufa: 10,
-            pirulito: 16,
-            cupcake: 17,
-            maca: 17,
-            portaRetrato: 17,
-            paoDeMel: 20
-        };
-
-        const sweetNames = {
-            trufa: 'Trufa',
-            pirulito: 'Pirulito',
-            cupcake: 'Cupcake',
-            maca: 'Maçã',
-            portaRetrato: 'Porta-retrato',
-            paoDeMel: 'Pão de Mel'
-        };
-
-        // Cake Handlers
-        function toggleCakeSection(checked) {
-            orderState.includeCake = checked;
-            const wrapper = document.getElementById('cake-options-wrapper');
-            if (checked) {
-                wrapper.classList.remove('opacity-40', 'pointer-events-none');
-            } else {
-                wrapper.classList.add('opacity-40', 'pointer-events-none');
-            }
-            updateCalculator();
-        }
-
-        function selectCakeType(type, price) {
-            orderState.cakeType = type;
-            orderState.cakePricePerKg = price;
-            
-            document.querySelectorAll('.cake-type-btn').forEach(btn => {
-                btn.classList.remove('active', 'border-terraBrand', 'ring-2', 'ring-terraBrand/20');
-                if (btn.dataset.type === type) {
-                    btn.classList.add('active', 'border-terraBrand', 'ring-2', 'ring-terraBrand/20');
-                }
-            });
-            updateCalculator();
-        }
-
         function updateCakeKg(val) {
-            orderState.cakeKg = parseFloat(val);
-            const slices = Math.round(orderState.cakeKg * 10);
-            document.getElementById('kg-display').innerText = `${orderState.cakeKg.toFixed(1).replace('.', ',')} kg (~ ${slices} fatias)`;
-            updateCalculator();
-        }
-
-        function selectDough(dough) {
-            orderState.cakeDough = dough;
-            document.querySelectorAll('.dough-btn').forEach(btn => {
-                btn.classList.remove('active', 'border-terraBrand', 'ring-2', 'ring-terraBrand/20');
-                if (btn.dataset.dough === dough) {
-                    btn.classList.add('active', 'border-terraBrand', 'ring-2', 'ring-terraBrand/20');
-                }
-            });
-            updateCalculator();
-        }
-
-        function selectFilling(filling) {
-            orderState.cakeFilling = filling;
-            updateCalculator();
-        }
-
-        // Kit Handlers
-        function selectKit(id, price, name) {
-            orderState.selectedKit = { id, price, name };
-
-            document.querySelectorAll('.kit-card').forEach(card => {
-                card.classList.remove('border-terraBrand', 'ring-2', 'ring-terraBrand/20', 'bg-roseAccent/10');
-                if (parseInt(card.dataset.kitId) === id) {
-                    card.classList.add('border-terraBrand', 'ring-2', 'ring-terraBrand/20', 'bg-roseAccent/10');
-                }
-            });
-            document.getElementById('clear-kit-btn').classList.remove('hidden');
-            updateCalculator();
-        }
-
-        function deselectKit() {
-            orderState.selectedKit = null;
-            document.querySelectorAll('.kit-card').forEach(card => {
-                card.classList.remove('border-terraBrand', 'ring-2', 'ring-terraBrand/20', 'bg-roseAccent/10');
-            });
-            document.getElementById('clear-kit-btn').classList.add('hidden');
-            updateCalculator();
-        }
-
-        // Sweets Handlers
-        function changeSweetQty(sweetKey, delta) {
-            const current = orderState.sweetsQty[sweetKey];
-            const next = Math.max(0, current + delta);
-            orderState.sweetsQty[sweetKey] = next;
-            document.getElementById(`qty-${sweetKey}`).innerText = next;
-            updateCalculator();
-        }
-
-        // Recalculate Total and UI Summary
-        function updateCalculator() {
-            let total = 0;
-            let htmlBreakdown = '';
-
-            // Cake calculation
-            if (orderState.includeCake) {
-                const cakeTotal = orderState.cakeKg * orderState.cakePricePerKg;
-                total += cakeTotal;
-                const typeText = orderState.cakeType === 'pasta' ? 'Pasta Americana' : 'Chantilly';
-                
-                htmlBreakdown += `
-                    <div class="py-2 border-b border-gray-100 flex justify-between items-start">
-                        <div>
-                            <span class="font-bold text-terraBrand block">Bolo ${typeText} (${orderState.cakeKg.toFixed(1).replace('.', ',')} kg)</span>
-                            <span class="text-[11px] text-gray-500 block">${orderState.cakeDough} • Recheio: ${orderState.cakeFilling}</span>
-                        </div>
-                        <span class="font-semibold text-terraBrand">R$ ${cakeTotal.toFixed(2).replace('.', ',')}</span>
-                    </div>
-                `;
-            }
-
-            // Kit calculation
-            if (orderState.selectedKit) {
-                total += orderState.selectedKit.price;
-                htmlBreakdown += `
-                    <div class="py-2 border-b border-gray-100 flex justify-between items-center">
-                        <div>
-                            <span class="font-bold text-terraBrand block">${orderState.selectedKit.name}</span>
-                            <span class="text-[11px] text-gray-500">Combo promocional</span>
-                        </div>
-                        <span class="font-semibold text-terraBrand">R$ ${orderState.selectedKit.price.toFixed(2).replace('.', ',')}</span>
-                    </div>
-                `;
-            }
-
-            // Individual Sweets calculation
-            let sweetsSubtotal = 0;
-            let sweetsList = [];
-            for (const key in orderState.sweetsQty) {
-                const qty = orderState.sweetsQty[key];
-                if (qty > 0) {
-                    const sub = qty * sweetPrices[key];
-                    sweetsSubtotal += sub;
-                    sweetsList.push(`${qty}x ${sweetNames[key]}`);
-                }
-            }
-
-            if (sweetsSubtotal > 0) {
-                total += sweetsSubtotal;
-                htmlBreakdown += `
-                    <div class="py-2 border-b border-gray-100 flex justify-between items-start">
-                        <div>
-                            <span class="font-bold text-terraBrand block">Doces Avulsos</span>
-                            <span class="text-[11px] text-gray-500 block">${sweetsList.join(', ')}</span>
-                        </div>
-                        <span class="font-semibold text-terraBrand">R$ ${sweetsSubtotal.toFixed(2).replace('.', ',')}</span>
-                    </div>
-                `;
-            }
-
-            if (!orderState.includeCake && !orderState.selectedKit && sweetsSubtotal === 0) {
-                htmlBreakdown = `<p class="text-gray-400 text-center py-4 italic">Nenhum item selecionado ainda.</p>`;
-            }
-
-            document.getElementById('summary-breakdown').innerHTML = htmlBreakdown;
-            document.getElementById('total-price-display').innerText = `R$ ${total.toFixed(2).replace('.', ',')}`;
-        }
-
-        // WhatsApp Export Message
-        function sendOrderWhatsApp() {
-            let total = 0;
-            let msg = `*Olá @docebellalu! Gostaria de fazer um orçamento pelo site:*\n\n`;
-
-            if (orderState.includeCake) {
-                const cakeTotal = orderState.cakeKg * orderState.cakePricePerKg;
-                total += cakeTotal;
-                const typeText = orderState.cakeType === 'pasta' ? 'Pasta Americana (R$ 120/kg)' : 'Chantilly (R$ 100/kg)';
-                
-                msg += `🎂 *BOLO PERSONALIZADO*\n`;
-                msg += `• Cobertura: ${typeText}\n`;
-                msg += `• Peso: ${orderState.cakeKg.toFixed(1).replace('.', ',')} kg (~${Math.round(orderState.cakeKg * 10)} fatias)\n`;
-                msg += `• Massa: ${orderState.cakeDough}\n`;
-                msg += `• Recheio: ${orderState.cakeFilling}\n\n`;
-            }
-
-            if (orderState.selectedKit) {
-                total += orderState.selectedKit.price;
-                msg += `🎁 *KIT PROMOCIONAL*\n`;
-                msg += `• ${orderState.selectedKit.name} (R$ ${orderState.selectedKit.price.toFixed(2).replace('.', ',')})\n\n`;
-            }
-
-            let sweetsList = [];
-            let sweetsSubtotal = 0;
-            for (const key in orderState.sweetsQty) {
-                const qty = orderState.sweetsQty[key];
-                if (qty > 0) {
-                    const sub = qty * sweetPrices[key];
-                    sweetsSubtotal += sub;
-                    sweetsList.push(`  - ${qty}x ${sweetNames[key]} (R$ ${sub.toFixed(2).replace('.', ',')})`);
-                }
-            }
-
-            if (sweetsList.length > 0) {
-                total += sweetsSubtotal;
-                msg += `🍬 *DOCES AVULSOS*\n${sweetsList.join('\n')}\n\n`;
-            }
-
-            const notes = document.getElementById('order-notes').value.trim();
-            if (notes) {
-                msg += `📝 *TEMA / OBSERVAÇÕES:*\n"${notes}"\n\n`;
-            }
-
-            msg += `💰 *VALOR TOTAL ESTIMADO:* R$ ${total.toFixed(2).replace('.', ',')}\n\n`;
-            msg += `Poderia me confirmar a disponibilidade para a minha data?`;
-
-            const encoded = encodeURIComponent(msg);
-            const phone = "5511917855445";
-            window.open(`https://wa.me/${phone}?text=${encoded}`, '_blank');
-        }
-
-        // Mobile Menu Toggle
-        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
-        });
-
-        // Initialize on Load
-        window.onload = function() {
-            updateCalculator();
+            document.getElementById('kg-display').innerText = `${parseFloat(val).toFixed(1).replace('.', ',')} kg (~ ${Math.round(val * 10)} fatias)`;
         }
     </script>
 </body>
